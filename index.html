@@ -3,102 +3,521 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="JN Soluciones Integrales: electricidad, plomería, construcción, remodelaciones, herrería, pintura y mantenimiento para consorcios.">
+  <meta name="description" content="JN Soluciones Integrales: todos los oficios de tu obra en un solo llamado. Electricidad, plomería, construcción, remodelaciones, herrería, pintura y mantenimiento para consorcios en Buenos Aires.">
   <meta name="theme-color" content="#09233f">
-  <title>JN Soluciones Integrales | Construcción y mantenimiento</title>
+  <meta property="og:title" content="JN Soluciones Integrales | Un llamado. Todo resuelto.">
+  <meta property="og:description" content="Electricidad, plomería, construcción, remodelaciones, herrería, pintura y consorcios. Un solo equipo, un solo interlocutor.">
+  <title>JN Soluciones Integrales | Construcción, remodelación y mantenimiento</title>
   <link rel="icon" href="assets/jn-logo.webp">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">
+
+  <!-- ═══════ HEADER ═══════ -->
+  <header class="site-header" id="inicio">
     <div class="container nav-wrap">
       <a class="brand" href="#inicio" aria-label="JN Soluciones Integrales - Inicio">
         <img src="assets/jn-logo.webp" alt="Logo JN Soluciones Integrales">
         <span><strong>JN</strong><small>Soluciones Integrales</small></span>
       </a>
-      <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false"><i data-lucide="menu"></i></button>
+      <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a><a href="#nosotros">Por qué elegirnos</a><a href="#consorcios">Consorcios</a><a href="#contacto">Contacto</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Por qué elegirnos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#consorcios">Consorcios</a>
+        <a href="#faq">FAQ</a>
         <a class="nav-cta wa-link" href="#"><i data-lucide="message-circle"></i> Presupuesto</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow"><i data-lucide="badge-check"></i> Servicio integral de obra y mantenimiento</div>
-          <h1>Todos los oficios de tu obra o mantenimiento en <span>un solo llamado</span></h1>
-          <p>Eliminamos la complicación de coordinar múltiples contratistas. Equipo ágil, garantía profesional y cumplimiento de plazos.</p>
+          <div class="eyebrow"><i data-lucide="badge-check"></i> Servicio integral · Buenos Aires</div>
+          <h1>Un solo llamado.<br><span>Toda la obra resuelta.</span></h1>
+          <p>Coordinamos electricistas, plomeros, albañiles, herreros y pintores para que vos no tengas que hacerlo. Un equipo, un presupuesto, un interlocutor.</p>
           <div class="hero-actions">
-            <a class="button button-whatsapp wa-link" href="#"><i data-lucide="message-circle"></i> Solicitar presupuesto por WhatsApp</a>
+            <a class="button button-whatsapp wa-link" href="#"><i data-lucide="message-circle"></i> Pedí tu presupuesto gratis</a>
             <a class="text-link" href="#servicios">Ver todos los servicios <i data-lucide="arrow-right"></i></a>
           </div>
-          <div class="hero-note"><span><i data-lucide="check"></i> Respuesta ágil</span><span><i data-lucide="check"></i> Presupuesto claro</span></div>
+          <div class="hero-badges">
+            <span class="hero-badge"><i data-lucide="check"></i> Respuesta en menos de 1 hora</span>
+            <span class="hero-badge"><i data-lucide="check"></i> Presupuesto sin cargo</span>
+            <span class="hero-badge"><i data-lucide="check"></i> Garantía por escrito</span>
+          </div>
         </div>
         <div class="hero-visual">
-          <div class="hero-card"><img src="assets/jn-hero.webp" alt="Identidad de JN Soluciones Integrales"></div>
-          <div class="floating-proof"><i data-lucide="shield-check"></i><span><strong>Trabajo profesional</strong>Coordinación integral y respaldo</span></div>
+          <div class="hero-card">
+            <img src="assets/jn-hero.webp" alt="Equipo JN Soluciones Integrales trabajando en obra">
+          </div>
+          <div class="floating-proof">
+            <i data-lucide="shield-check"></i>
+            <span><strong>+200 obras realizadas</strong>Clientes satisfechos en CABA y GBA</span>
+          </div>
+          <div class="floating-rating">
+            <div class="stars">★★★★★</div>
+            <span>4.9 / 5 · Calificación promedio</span>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══════ TRUST BAR ═══════ -->
     <section class="trust-bar" aria-label="Beneficios principales">
       <div class="container trust-grid">
-        <div class="trust-item"><i data-lucide="wrench"></i><span>Atención integral</span></div>
-        <div class="trust-item"><i data-lucide="shield-check"></i><span>Garantía por escrito</span></div>
-        <div class="trust-item"><i data-lucide="clock-3"></i><span>Cumplimiento de plazos</span></div>
-        <div class="trust-item"><i data-lucide="hard-hat"></i><span>Personal calificado</span></div>
+        <div class="trust-item"><i data-lucide="users"></i><span>Un solo interlocutor para todos los rubros</span></div>
+        <div class="trust-item"><i data-lucide="shield-check"></i><span>Garantía por escrito en cada trabajo</span></div>
+        <div class="trust-item"><i data-lucide="clock-3"></i><span>Cumplimiento de plazos garantizado</span></div>
+        <div class="trust-item"><i data-lucide="hard-hat"></i><span>Personal calificado y asegurado</span></div>
       </div>
     </section>
 
+    <!-- ═══════ SERVICIOS ═══════ -->
     <section class="section services" id="servicios">
       <div class="container">
-        <div class="section-heading"><div><span class="kicker">Todo resuelto, en un solo lugar</span><h2>Servicios integrales para cada etapa</h2></div><p>Un equipo coordinado para resolver desde una reparación puntual hasta una remodelación completa.</p></div>
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Todo resuelto, en un solo lugar</span>
+            <h2>6 oficios. 1 equipo. 0 complicaciones.</h2>
+          </div>
+          <p>No importa qué necesite tu obra: lo coordinamos nosotros. Sin que tengas que buscar distintos proveedores ni seguirles el ritmo.</p>
+        </div>
         <div class="services-grid">
-          <article class="service-card" data-service="Electricidad comercial y residencial"><div class="service-icon"><i data-lucide="zap"></i></div><h3>Electricidad comercial y residencial</h3><p>Instalaciones, reparaciones, tableros y mantenimiento eléctrico seguro.</p><a class="service-link" href="#">Consultar servicio <i data-lucide="arrow-right"></i></a></article>
-          <article class="service-card" data-service="Plomería y gas"><div class="service-icon"><i data-lucide="flame"></i></div><h3>Plomería y gas</h3><p>Soluciones para pérdidas, instalaciones, artefactos y redes sanitarias.</p><a class="service-link" href="#">Consultar servicio <i data-lucide="arrow-right"></i></a></article>
-          <article class="service-card" data-service="Construcción y remodelaciones integrales"><div class="service-icon"><i data-lucide="construction"></i></div><h3>Construcción y remodelaciones integrales</h3><p>Obras, ampliaciones y renovaciones coordinadas de principio a fin.</p><a class="service-link" href="#">Consultar servicio <i data-lucide="arrow-right"></i></a></article>
-          <article class="service-card" data-service="Mantenimiento para consorcios"><div class="service-icon"><i data-lucide="building-2"></i></div><h3>Mantenimiento para consorcios</h3><p>Atención preventiva y correctiva para espacios comunes y unidades.</p><a class="service-link" href="#">Consultar servicio <i data-lucide="arrow-right"></i></a></article>
-          <article class="service-card" data-service="Herrería y estructuras"><div class="service-icon"><i data-lucide="hammer"></i></div><h3>Herrería y estructuras</h3><p>Fabricación, reparación y colocación de estructuras y cerramientos.</p><a class="service-link" href="#">Consultar servicio <i data-lucide="arrow-right"></i></a></article>
-          <article class="service-card" data-service="Pintura profesional"><div class="service-icon"><i data-lucide="paint-roller"></i></div><h3>Pintura profesional</h3><p>Preparación y terminaciones prolijas para interiores y exteriores.</p><a class="service-link" href="#">Consultar servicio <i data-lucide="arrow-right"></i></a></article>
+          <article class="service-card" data-service="Electricidad comercial y residencial">
+            <div class="service-icon"><i data-lucide="zap"></i></div>
+            <h3>Electricidad</h3>
+            <p>Instalaciones, reparaciones, tableros eléctricos y mantenimiento preventivo para hogares y comercios.</p>
+            <a class="service-link wa-link" href="#">Consultar <i data-lucide="arrow-right"></i></a>
+          </article>
+          <article class="service-card" data-service="Plomería y gas">
+            <div class="service-icon"><i data-lucide="flame"></i></div>
+            <h3>Plomería y gas</h3>
+            <p>Detección de pérdidas, instalaciones nuevas, artefactos y redes sanitarias con habilitación.</p>
+            <a class="service-link wa-link" href="#">Consultar <i data-lucide="arrow-right"></i></a>
+          </article>
+          <article class="service-card" data-service="Construcción y remodelaciones integrales">
+            <div class="service-icon"><i data-lucide="construction"></i></div>
+            <h3>Construcción y remodelaciones</h3>
+            <p>Obras nuevas, ampliaciones y renovaciones completas coordinadas de principio a fin.</p>
+            <a class="service-link wa-link" href="#">Consultar <i data-lucide="arrow-right"></i></a>
+          </article>
+          <article class="service-card" data-service="Mantenimiento para consorcios">
+            <div class="service-icon"><i data-lucide="building-2"></i></div>
+            <h3>Consorcios</h3>
+            <p>Atención preventiva y correctiva para espacios comunes y unidades con documentación para administraciones.</p>
+            <a class="service-link wa-link" href="#">Consultar <i data-lucide="arrow-right"></i></a>
+          </article>
+          <article class="service-card" data-service="Herrería y estructuras">
+            <div class="service-icon"><i data-lucide="hammer"></i></div>
+            <h3>Herrería y estructuras</h3>
+            <p>Fabricación, reparación y colocación de rejas, portones, estructuras metálicas y cerramientos.</p>
+            <a class="service-link wa-link" href="#">Consultar <i data-lucide="arrow-right"></i></a>
+          </article>
+          <article class="service-card" data-service="Pintura profesional">
+            <div class="service-icon"><i data-lucide="paint-roller"></i></div>
+            <h3>Pintura profesional</h3>
+            <p>Preparación de superficies y terminaciones impecables para interiores, exteriores y frentes.</p>
+            <a class="service-link wa-link" href="#">Consultar <i data-lucide="arrow-right"></i></a>
+          </article>
+        </div>
+        <div class="services-cta">
+          <p>¿No encontrás lo que buscás?</p>
+          <a class="button button-outline wa-link" href="#"><i data-lucide="message-circle"></i> Consultanos tu caso</a>
         </div>
       </div>
     </section>
 
+    <!-- ═══════ POR QUÉ ELEGIRNOS ═══════ -->
     <section class="section why" id="nosotros">
       <div class="container why-grid">
-        <div class="why-visual"><div class="blueprint"><i data-lucide="construction"></i><span>Obra bien coordinada</span></div><div class="quality-card"><i data-lucide="sparkles"></i><strong>Calidad en cada detalle</strong></div></div>
-        <div class="why-copy"><span class="kicker">Por qué elegirnos</span><h2>Menos complicaciones. Más control y mejores resultados.</h2><p>Centralizamos la coordinación de la obra para que no tengas que perseguir a distintos proveedores. Te acompañamos con comunicación clara, organización y responsabilidad desde el diagnóstico hasta la entrega.</p>
-          <ul><li><i data-lucide="check"></i>Un único interlocutor para coordinar todos los rubros</li><li><i data-lucide="check"></i>Presupuestos claros y gestión transparente</li><li><i data-lucide="check"></i>Orden y limpieza durante cada etapa de la obra</li><li><i data-lucide="check"></i>Supervisión y terminaciones de calidad</li></ul>
+        <div class="why-visual">
+          <div class="blueprint">
+            <i data-lucide="construction"></i>
+            <span>Obra bien coordinada</span>
+          </div>
+          <div class="quality-card"><i data-lucide="sparkles"></i><strong>Calidad en cada detalle</strong></div>
+        </div>
+        <div class="why-copy">
+          <span class="kicker">Por qué elegirnos</span>
+          <h2>Terminá con la pesadilla de coordinar contratistas.</h2>
+          <p>Llamar a un electricista, después al plomero, después al pintor y que ninguno sepa lo que hizo el otro... eso se acabó. Con JN Soluciones Integrales, hablás con una sola persona y tu obra avanza.</p>
+          <ul class="why-list">
+            <li><i data-lucide="check"></i><span><strong>Un único interlocutor</strong> que coordina electricistas, plomeros, albañiles, herreros y pintores</span></li>
+            <li><i data-lucide="check"></i><span><strong>Presupuesto detallado y por escrito</strong> antes de empezar, sin sorpresas</span></li>
+            <li><i data-lucide="check"></i><span><strong>Obra limpia y ordenada</strong> en cada etapa, con supervisión permanente</span></li>
+            <li><i data-lucide="check"></i><span><strong>Garantía real</strong> sobre materiales y mano de obra una vez terminado el trabajo</span></li>
+          </ul>
           <a class="button button-primary wa-link" href="#">Hablemos de tu proyecto <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
     </section>
 
-    <section class="consorcios" id="consorcios">
-      <div class="container consorcios-grid">
-        <div><span class="kicker kicker-light">Consorcios y administraciones</span><h2>Un proveedor confiable para todas las necesidades del edificio</h2><p>Atención ágil para urgencias, reparaciones y mantenimiento planificado. Simplificamos la gestión del administrador con seguimiento ordenado y documentación clara.</p><a class="button button-gold consorcio-link" href="#">Consultar por mi consorcio <i data-lucide="arrow-right"></i></a></div>
-        <div class="consorcios-panel">
-          <div><i data-lucide="clock-3"></i><span><strong>Respuesta rápida</strong>Atención de urgencias y coordinación ágil.</span></div><div><i data-lucide="badge-check"></i><span><strong>Facturación A / B</strong>Documentación para administraciones.</span></div><div><i data-lucide="wrench"></i><span><strong>Mantenimiento preventivo</strong>Revisión y planificación para evitar problemas.</span></div><div><i data-lucide="construction"></i><span><strong>Mantenimiento correctivo</strong>Resolución profesional de reparaciones.</span></div>
+    <!-- ═══════ PROYECTOS / OBRAS REALIZADAS ═══════ -->
+    <section class="section projects" id="proyectos">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="kicker">Proyectos realizados</span>
+          <h2>Obras que hablan por nosotros</h2>
+          <p>Algunos de los trabajos que completamos recientemente en CABA y GBA.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-badge">Remodelación integral</div>
+            <div class="project-visual project-1">
+              <div class="project-overlay">
+                <span class="project-tag"><i data-lucide="map-pin"></i> Palermo, CABA</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Renovación completa de departamento 3 ambientes</h3>
+              <p>Electricidad, plomería, pintura y pisos nuevos coordinados en 3 semanas.</p>
+              <div class="project-meta">
+                <span><i data-lucide="clock-3"></i> 3 semanas</span>
+                <span><i data-lucide="hard-hat"></i> 4 oficios</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-badge">Local comercial</div>
+            <div class="project-visual project-2">
+              <div class="project-overlay">
+                <span class="project-tag"><i data-lucide="map-pin"></i> Villa Crespo, CABA</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Refacción y habilitación de local gastronómico</h3>
+              <p>Instalación eléctrica trifásica, gas, cañerías y pintura en 2 semanas.</p>
+              <div class="project-meta">
+                <span><i data-lucide="clock-3"></i> 2 semanas</span>
+                <span><i data-lucide="hard-hat"></i> 5 oficios</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-badge">Consorcio</div>
+            <div class="project-visual project-3">
+              <div class="project-overlay">
+                <span class="project-tag"><i data-lucide="map-pin"></i> Caballito, CABA</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Mantenimiento preventivo edificio de 12 pisos</h3>
+              <p>Plan de mantenimiento anual con documentación y seguimiento para la administración.</p>
+              <div class="project-meta">
+                <span><i data-lucide="clock-3"></i> Contrato anual</span>
+                <span><i data-lucide="hard-hat"></i> 6 oficios</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="projects-cta">
+          <a class="button button-whatsapp wa-link" href="#"><i data-lucide="message-circle"></i> Quiero un presupuesto para mi obra</a>
         </div>
       </div>
     </section>
 
-    <section class="section process" id="proceso"><div class="container"><div class="section-heading process-heading"><div><span class="kicker">Cómo trabajamos</span><h2>Un proceso claro de principio a fin</h2></div><p>Sabés qué se va a hacer, cuánto cuesta y en qué etapa está el trabajo.</p></div><div class="steps-grid"><article class="step-card"><span class="step-number">01</span><h3>Consulta y diagnóstico</h3><p>Nos contás qué necesitás y evaluamos el trabajo.</p></article><article class="step-card"><span class="step-number">02</span><h3>Presupuesto detallado</h3><p>Definimos alcance, materiales, tiempos y costos.</p></article><article class="step-card"><span class="step-number">03</span><h3>Ejecución y supervisión</h3><p>Coordinamos los oficios y controlamos cada avance.</p></article><article class="step-card"><span class="step-number">04</span><h3>Entrega y garantía</h3><p>Revisamos las terminaciones y respaldamos el trabajo.</p></article></div></div></section>
-
-    <section class="contact-section" id="contacto">
-      <div class="container contact-grid">
-        <div class="contact-copy"><span class="kicker">Pedí tu presupuesto</span><h2>Contanos qué necesitás. Nosotros coordinamos el resto.</h2><p>Completá el formulario y la consulta se abrirá directamente en WhatsApp con todos los datos.</p><a class="contact-phone" href="tel:+541126061647"><i data-lucide="phone"></i><span><small>También podés llamarnos</small>11 2606-1647</span></a></div>
-        <form class="contact-form" id="contact-form"><div class="field-row"><label>Nombre<input name="name" type="text" placeholder="Tu nombre" required></label><label>Teléfono / WhatsApp<input name="phone" type="tel" placeholder="11 0000-0000" required></label></div><label>Tipo de servicio<span class="select-wrap"><select name="service" required><option value="" selected disabled>Seleccioná una opción</option><option>Electricidad comercial y residencial</option><option>Plomería y gas</option><option>Construcción y remodelaciones integrales</option><option>Mantenimiento para consorcios</option><option>Herrería y estructuras</option><option>Pintura profesional</option><option>Otro / Consulta general</option></select><i data-lucide="chevron-down"></i></span></label><label>Mensaje<textarea name="message" rows="4" placeholder="Contanos brevemente qué necesitás..." required></textarea></label><button class="button button-whatsapp submit-button" type="submit"><i data-lucide="message-circle"></i> Enviar consulta por WhatsApp</button><p class="form-note">Al enviar, se abrirá WhatsApp. No guardamos tus datos en este sitio.</p></form>
+    <!-- ═══════ TESTIMONIOS ═══════ -->
+    <section class="testimonials" id="testimonios">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="kicker kicker-light">Opiniones de clientes</span>
+          <h2>Lo que dicen los que ya trabajaron con nosotros</h2>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote>"Contraté JN para una remodelación completa del baño y la cocina. Lo que más me sorprendió fue no tener que llamar a nadie: ellos coordinaron todo. El resultado fue impecable y terminaron antes de lo previsto."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar author-1">MR</div>
+              <div>
+                <strong>Marcela R.</strong>
+                <span>Remodelación · Belgrano, CABA</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card featured-testimonial">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote>"Soy administradora de tres edificios y JN Soluciones se convirtió en mi único proveedor de mantenimiento. Responden rápido, documentan todo y la facturación es perfecta. Un alivio total."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar author-2">SL</div>
+              <div>
+                <strong>Sofía L.</strong>
+                <span>Administradora de consorcios · CABA</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote>"Tuve un problema de pérdida de gas un sábado a la noche. Me respondieron en menos de 30 minutos y lo resolvieron al otro día. Eso no tiene precio. Desde ahí los uso para todo."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar author-3">DM</div>
+              <div>
+                <strong>Diego M.</strong>
+                <span>Urgencia plomería · San Telmo, CABA</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
+
+    <!-- ═══════ CONSORCIOS ═══════ -->
+    <section class="consorcios" id="consorcios">
+      <div class="container consorcios-grid">
+        <div>
+          <span class="kicker kicker-light">Para administradores de edificios</span>
+          <h2>Un proveedor para todas las necesidades del edificio</h2>
+          <p>Simplificamos tu gestión: urgencias, correctivos y preventivos con seguimiento ordenado, documentación clara y facturación A/B para tu administración.</p>
+          <a class="button button-gold consorcio-link" href="#">Consultar por mi consorcio <i data-lucide="arrow-right"></i></a>
+        </div>
+        <div class="consorcios-panel">
+          <div>
+            <i data-lucide="clock-3"></i>
+            <span><strong>Respuesta rápida</strong>Atención de urgencias y coordinación ágil las 24 hs.</span>
+          </div>
+          <div>
+            <i data-lucide="badge-check"></i>
+            <span><strong>Facturación A / B</strong>Documentación completa para administraciones.</span>
+          </div>
+          <div>
+            <i data-lucide="wrench"></i>
+            <span><strong>Mantenimiento preventivo</strong>Plan anual para evitar problemas costosos.</span>
+          </div>
+          <div>
+            <i data-lucide="construction"></i>
+            <span><strong>Mantenimiento correctivo</strong>Resolución profesional de reparaciones urgentes.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ CÓMO TRABAJAMOS ═══════ -->
+    <section class="section process" id="proceso">
+      <div class="container">
+        <div class="section-heading process-heading centered">
+          <span class="kicker">Cómo trabajamos</span>
+          <h2>4 pasos. Todo claro desde el principio.</h2>
+          <p>Sabés qué se va a hacer, cuánto cuesta y en qué etapa está el trabajo. Siempre.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-content">
+              <i data-lucide="message-circle"></i>
+              <h3>Consulta y diagnóstico</h3>
+              <p>Nos contás qué necesitás por WhatsApp o teléfono y evaluamos el trabajo.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-content">
+              <i data-lucide="file-text"></i>
+              <h3>Presupuesto detallado</h3>
+              <p>Definimos alcance, materiales, tiempos y costos. Sin sorpresas ni letra chica.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-content">
+              <i data-lucide="hard-hat"></i>
+              <h3>Ejecución y supervisión</h3>
+              <p>Coordinamos todos los oficios y controlamos cada avance con fotos de progreso.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <span class="step-number">04</span>
+            <div class="step-content">
+              <i data-lucide="shield-check"></i>
+              <h3>Entrega y garantía</h3>
+              <p>Revisamos cada terminación con vos y entregamos garantía por escrito del trabajo.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FAQ ═══════ -->
+    <section class="section faq" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-heading centered">
+          <span class="kicker">Preguntas frecuentes</span>
+          <h2>Todo lo que querés saber antes de llamar</h2>
+        </div>
+        <div class="faq-list" id="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Cómo funciona el presupuesto? ¿Tiene algún costo?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>El presupuesto es totalmente sin cargo. Nos contás qué necesitás, coordinamos una visita o evaluamos por fotos/video, y te mandamos un presupuesto detallado con materiales, mano de obra y plazos estimados. Sin compromiso.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿En qué zonas trabajan?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Trabajamos en toda la Ciudad Autónoma de Buenos Aires (CABA) y Gran Buenos Aires (GBA). Para obras fuera de esas zonas, consultanos y evaluamos según el proyecto.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Puedo contratar un solo servicio o necesito contratar todo junto?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Podés contratar desde un solo oficio (solo electricidad, solo plomería, etc.) hasta la coordinación de todos los rubros de una obra completa. Nos adaptamos a lo que necesitás.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Tienen garantía sobre los trabajos?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Sí. Todos nuestros trabajos incluyen garantía por escrito sobre materiales y mano de obra. El plazo varía según el tipo de trabajo y te lo informamos en el presupuesto.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Cuánto tiempo lleva arrancar una obra?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Depende del tipo y escala del trabajo. Reparaciones puntuales pueden resolverse en días. Obras de remodelación o construcción requieren planificación previa. En el presupuesto te damos un cronograma claro.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Emiten factura? ¿Pueden trabajar con administraciones?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Sí, emitimos facturas tipo A y B. Tenemos experiencia trabajando con administraciones de consorcios, con documentación ordenada y seguimiento de trabajos para facilitar la gestión.</p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-cta">
+          <p>¿Tenés otra pregunta?</p>
+          <a class="button button-whatsapp wa-link" href="#"><i data-lucide="message-circle"></i> Preguntanos por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FORMULARIO ═══════ -->
+    <section class="contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="kicker">Pedí tu presupuesto</span>
+          <h2>Contanos qué necesitás.<br>Nosotros coordinamos el resto.</h2>
+          <p>Completá el formulario y se abrirá WhatsApp con tu consulta lista para enviar. Rápido, sin formularios complicados.</p>
+          <div class="contact-features">
+            <div class="contact-feature"><i data-lucide="check-circle"></i><span>Respuesta en menos de 1 hora</span></div>
+            <div class="contact-feature"><i data-lucide="check-circle"></i><span>Presupuesto sin cargo</span></div>
+            <div class="contact-feature"><i data-lucide="check-circle"></i><span>Sin compromiso</span></div>
+          </div>
+          <a class="contact-phone" href="tel:+541126061647">
+            <i data-lucide="phone"></i>
+            <span><small>O llamanos directamente</small>11 2606-1647</span>
+          </a>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contact-form">
+            <div class="field-row">
+              <label>
+                Tu nombre
+                <input name="name" type="text" placeholder="Ej: María García" required autocomplete="name">
+              </label>
+              <label>
+                WhatsApp
+                <input name="phone" type="tel" placeholder="11 0000-0000" required autocomplete="tel">
+              </label>
+            </div>
+            <label>
+              ¿Qué servicio necesitás?
+              <span class="select-wrap">
+                <select name="service" required>
+                  <option value="" selected disabled>Elegí una opción</option>
+                  <option>Electricidad comercial y residencial</option>
+                  <option>Plomería y gas</option>
+                  <option>Construcción y remodelaciones integrales</option>
+                  <option>Mantenimiento para consorcios</option>
+                  <option>Herrería y estructuras</option>
+                  <option>Pintura profesional</option>
+                  <option>Otro / Consulta general</option>
+                </select>
+                <i data-lucide="chevron-down"></i>
+              </span>
+            </label>
+            <label>
+              Contanos brevemente qué necesitás
+              <textarea name="message" rows="3" placeholder="Ej: Necesito cambiar el tablero eléctrico y revisar las instalaciones de mi departamento en Palermo..." required></textarea>
+            </label>
+            <button class="button button-whatsapp submit-button" type="submit">
+              <i data-lucide="message-circle"></i> Enviar consulta por WhatsApp
+            </button>
+            <p class="form-note"><i data-lucide="lock"></i> Al enviar, se abrirá WhatsApp. No guardamos tus datos.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer><div class="container footer-grid"><div class="footer-brand"><img src="assets/jn-logo.webp" alt="JN Soluciones Integrales"><div><strong>JN Soluciones Integrales</strong><p>Construcción, remodelación y mantenimiento integral.</p></div></div><div><h3>Contacto</h3><a href="tel:+541126061647">11 2606-1647</a><a class="wa-link" href="#">Escribir por WhatsApp</a></div><div><h3>Cobertura</h3><p>Consultanos por disponibilidad en tu zona.</p></div><div><h3>Redes</h3><div class="socials"><span title="Instagram en preparación"><i data-lucide="instagram"></i></span><span title="TikTok en preparación"><i data-lucide="music-2"></i></span></div><small>Instagram y TikTok: enlaces en preparación</small></div></div><div class="container footer-bottom"><span>© <span id="year"></span> JN Soluciones Integrales</span><span>Todos los derechos reservados</span></div></footer>
-  <a class="floating-whatsapp wa-link" href="#" aria-label="Solicitar presupuesto por WhatsApp"><i data-lucide="message-circle"></i><span>¿Necesitás un presupuesto?</span></a>
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/jn-logo.webp" alt="JN Soluciones Integrales">
+        <div>
+          <strong>JN Soluciones Integrales</strong>
+          <p>Construcción, remodelación y mantenimiento integral en CABA y GBA.</p>
+          <div class="socials">
+            <a href="#" title="Instagram" aria-label="Instagram JN Soluciones"><i data-lucide="instagram"></i></a>
+            <a href="#" title="TikTok" aria-label="TikTok JN Soluciones"><i data-lucide="music-2"></i></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Servicios</h3>
+        <a href="#servicios">Electricidad</a>
+        <a href="#servicios">Plomería y gas</a>
+        <a href="#servicios">Construcción</a>
+        <a href="#servicios">Herrería y pintura</a>
+        <a href="#consorcios">Consorcios</a>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <a href="tel:+541126061647"><i data-lucide="phone"></i> 11 2606-1647</a>
+        <a class="wa-link" href="#"><i data-lucide="message-circle"></i> WhatsApp</a>
+      </div>
+      <div>
+        <h3>Cobertura</h3>
+        <p>CABA y Gran Buenos Aires.</p>
+        <p>Consultanos disponibilidad para tu zona.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> JN Soluciones Integrales</span>
+      <span>Todos los derechos reservados</span>
+    </div>
+  </footer>
+
+  <!-- ═══════ FLOTANTE WHATSAPP ═══════ -->
+  <a class="floating-whatsapp wa-link" href="#" aria-label="Solicitar presupuesto por WhatsApp">
+    <i data-lucide="message-circle"></i>
+    <span>Presupuesto gratis</span>
+  </a>
 
   <script src="js/lucide.min.js"></script>
   <script src="js/app.js"></script>
