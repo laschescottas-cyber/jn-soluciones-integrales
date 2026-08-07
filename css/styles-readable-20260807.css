@@ -1593,3 +1593,59 @@ footer {
     display: none;
   }
 }
+
+
+/* ─── FAQ EN DOS COLUMNAS ─── */
+.faq-heading > p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 440px;
+  margin-top: 20px;
+}
+
+.faq-content {
+  min-width: 0;
+}
+
+@media (min-width: 901px) {
+  .faq-wrap {
+    width: calc(100% - clamp(48px, 6vw, 112px));
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: minmax(310px, .72fr) minmax(580px, 1.28fr);
+    gap: clamp(64px, 7vw, 130px);
+    align-items: start;
+  }
+
+  .faq-heading {
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding-top: 8px;
+  }
+
+  .faq-heading h2 {
+    max-width: 520px;
+    margin: 0;
+  }
+
+  .faq-list,
+  .faq-cta {
+    max-width: none;
+  }
+
+  .faq-list {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .faq-heading {
+    text-align: center;
+  }
+
+  .faq-heading > p {
+    margin: 16px auto 32px;
+  }
+}
