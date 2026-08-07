@@ -20,7 +20,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="icon" type="image/webp" href="assets/jn-logo.webp">
   <link rel="apple-touch-icon" href="assets/jn-logo.webp">
-  <link rel="stylesheet" href="css/styles-readable-20260807.css?v=20260807-contador-obras">
+  <link rel="stylesheet" href="css/styles-readable-20260807.css?v=20260807-mapa-cobertura">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -580,6 +580,69 @@
           <div class="faq-cta">
             <p>¿Tenés otra pregunta?</p>
             <a class="button button-outline" href="#contacto"><i data-lucide="messages-square"></i> Dejanos tu consulta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ COBERTURA ═══════ -->
+    <section class="section coverage" id="cobertura">
+      <div class="container coverage-grid">
+        <div class="coverage-copy">
+          <span class="kicker">Zona de cobertura</span>
+          <h2>Trabajamos en toda CABA y GBA</h2>
+          <p>Coordinamos obras, remodelaciones y mantenimientos en la Ciudad de Buenos Aires y en todos los partidos del Gran Buenos Aires.</p>
+
+          <div class="coverage-points">
+            <div><i data-lucide="map-pin-check"></i><span><strong>Toda CABA</strong>Todos los barrios de la Ciudad.</span></div>
+            <div><i data-lucide="map-pinned"></i><span><strong>Todo GBA</strong>Zona Norte, Oeste y Sur.</span></div>
+          </div>
+
+          <p class="coverage-note"><i data-lucide="info"></i> La fecha de visita se coordina según el tipo de trabajo y la disponibilidad del equipo.</p>
+
+          <a class="button button-primary wa-link" href="https://wa.me/5491126061647?text=Hola%20JN%20Soluciones%20Integrales%2C%20quisiera%20consultar%20la%20disponibilidad%20para%20mi%20zona." target="_blank" rel="noopener noreferrer">
+            <i data-lucide="message-circle"></i> Consultar por mi zona
+          </a>
+        </div>
+
+        <div class="coverage-map-card">
+          <div class="map-topline">
+            <span><i data-lucide="navigation"></i> Área de atención</span>
+            <strong>CABA + GBA</strong>
+          </div>
+
+          <svg class="coverage-map" viewBox="0 0 640 470" role="img" aria-labelledby="coverage-map-title coverage-map-desc">
+            <title id="coverage-map-title">Mapa visual de cobertura de JN Soluciones Integrales</title>
+            <desc id="coverage-map-desc">La empresa brinda atención en toda la Ciudad Autónoma de Buenos Aires y todo el Gran Buenos Aires.</desc>
+            <defs>
+              <pattern id="map-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                <path d="M32 0H0V32" fill="none" stroke="currentColor" stroke-width="1"/>
+              </pattern>
+              <filter id="map-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="8" stdDeviation="9" flood-opacity=".18"/>
+              </filter>
+            </defs>
+
+            <rect class="map-grid-pattern" width="640" height="470" rx="28" fill="url(#map-grid)"/>
+            <path class="map-river" d="M520 0H640V470H448c28-39 45-77 52-116 9-48-11-86-1-126 9-39 42-67 43-113 1-43-17-76-22-115Z"/>
+            <path class="map-gba-shape" filter="url(#map-shadow)" d="M119 88c53-55 143-75 224-54 75 19 127 70 148 135 18 56 6 132-35 184-40 51-112 81-186 77-77-4-156-37-190-99-31-58-19-155 39-243Z"/>
+            <path class="map-caba-shape" filter="url(#map-shadow)" d="M362 225l91-18 48 56-24 87-84 19-52-56 21-88Z"/>
+
+            <g class="map-label map-label-gba">
+              <circle cx="236" cy="202" r="6"/>
+              <text x="252" y="197">GRAN BUENOS AIRES</text>
+              <text class="map-label-small" x="252" y="220">Norte · Oeste · Sur</text>
+            </g>
+            <g class="map-label map-label-caba">
+              <circle cx="402" cy="290" r="6"/>
+              <text x="418" y="286">CABA</text>
+              <text class="map-label-small" x="418" y="309">Todos los barrios</text>
+            </g>
+          </svg>
+
+          <div class="map-legend" aria-hidden="true">
+            <span><i class="legend-caba"></i>CABA</span>
+            <span><i class="legend-gba"></i>Gran Buenos Aires</span>
           </div>
         </div>
       </div>
