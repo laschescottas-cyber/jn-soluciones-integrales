@@ -194,3 +194,49 @@ if ("IntersectionObserver" in window && observedSections.length) {
 
 /* Inicializa también los íconos creados dinámicamente. */
 lucide.createIcons();
+
+
+/* ─── Contador animado de obras ─── */
+const animatedCounters = [...document.querySelectorAll("[data-counter]")];
+
+animatedCounters.forEach((counter) => {
+  const target = Number(counter.dataset.counter);
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const showFinalValue = () => {
+    counter.textContent = new Intl.NumberFormat("es-AR").format(target);
+  };
+
+  const animateCounter = () => {
+    if (reducedMotion) {
+      showFinalValue();
+      return;
+    }
+
+    const duration = 1500;
+    const startTime = performance.now();
+
+    const update = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = Math.floor(target * easedProgress).toLocaleString("es-AR");
+
+      if (progress < 1) requestAnimationFrame(update);
+      else showFinalValue();
+    };
+
+    requestAnimationFrame(update);
+  };
+
+  if ("IntersectionObserver" in window) {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      if (!entries[0].isIntersecting) return;
+      animateCounter();
+      observer.disconnect();
+    }, { threshold: 0.55 });
+
+    counterObserver.observe(counter);
+  } else {
+    showFinalValue();
+  }
+});
