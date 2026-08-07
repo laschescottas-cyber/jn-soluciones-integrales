@@ -1956,6 +1956,10 @@ footer {
 }
 
 .project-lightbox {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
   width: min(94vw, 1180px);
   max-width: none;
   max-height: 92vh;
