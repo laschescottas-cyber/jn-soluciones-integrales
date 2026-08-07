@@ -71,11 +71,13 @@ form?.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(event.currentTarget);
 
+  const zone = String(data.get("zone") || "").trim();
   const lines = [
     "Hola JN Soluciones Integrales, completo el formulario del sitio web:",
     "",
     `👤 Nombre: ${data.get("name")}`,
     `🔧 Servicio: ${data.get("service")}`,
+    ...(zone ? [`📍 Zona: ${zone}`] : []),
     `📝 Consulta: ${data.get("message")}`,
   ];
 
@@ -107,3 +109,85 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ─── Init ─── */
 lucide.createIcons();
+
+
+/* ─── Galería ampliable de trabajos ─── */
+const projectImages = [...document.querySelectorAll(".projects-showcase img")];
+
+if (projectImages.length) {
+  const lightbox = document.createElement("dialog");
+  lightbox.className = "project-lightbox";
+  lightbox.setAttribute("aria-label", "Vista ampliada del trabajo");
+  lightbox.innerHTML = `
+    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">
+      <i data-lucide="x"></i>
+    </button>
+    <figure>
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+  `;
+  document.body.appendChild(lightbox);
+
+  const largeImage = lightbox.querySelector("img");
+  const caption = lightbox.querySelector("figcaption");
+  const closeButton = lightbox.querySelector(".lightbox-close");
+
+  const openProjectImage = (image) => {
+    largeImage.src = image.currentSrc || image.src;
+    largeImage.alt = image.alt;
+    caption.textContent = image.alt;
+    lightbox.showModal();
+    document.body.classList.add("lightbox-open");
+  };
+
+  projectImages.forEach((image) => {
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Ampliar: ${image.alt}`);
+    image.addEventListener("click", () => openProjectImage(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openProjectImage(image);
+      }
+    });
+  });
+
+  closeButton.addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+    largeImage.src = "";
+  });
+}
+
+/* ─── Sección activa en el menú ─── */
+const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]:not(.nav-cta)')];
+const observedSections = sectionLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+if ("IntersectionObserver" in window && observedSections.length) {
+  const activeSectionObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (!visible) return;
+
+    sectionLinks.forEach((link) => {
+      const isActive = link.getAttribute("href") === `#${visible.target.id}`;
+      link.classList.toggle("is-active", isActive);
+      if (isActive) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  }, {
+    rootMargin: "-25% 0px -60% 0px",
+    threshold: [0, 0.1, 0.4]
+  });
+
+  observedSections.forEach((section) => activeSectionObserver.observe(section));
+}
