@@ -47,7 +47,6 @@ menuButton.addEventListener("click", () => {
   lucide.createIcons();
 });
 
-/* Cerrar menú al hacer click en un enlace */
 nav.querySelectorAll("a").forEach((link) =>
   link.addEventListener("click", () => {
     nav.classList.remove("is-open");
@@ -57,7 +56,6 @@ nav.querySelectorAll("a").forEach((link) =>
   })
 );
 
-/* Cerrar menú al hacer click fuera */
 document.addEventListener("click", (e) => {
   if (!nav.contains(e.target) && !menuButton.contains(e.target)) {
     nav.classList.remove("is-open");
@@ -84,7 +82,6 @@ form?.addEventListener("submit", (event) => {
 
   const message = lines.join("\n");
 
-  /* Feedback visual en el botón */
   if (submitBtn) {
     submitBtn.textContent = "Abriendo WhatsApp...";
     submitBtn.disabled = true;
@@ -100,42 +97,10 @@ form?.addEventListener("submit", (event) => {
 
 /* ─── Header shadow en scroll ─── */
 const header = document.querySelector(".site-header");
-const onScroll = () => {
+window.addEventListener("scroll", () => {
   header.style.boxShadow =
-    window.scrollY > 10
-      ? "0 4px 24px rgba(9,35,63,.10)"
-      : "none";
-};
-window.addEventListener("scroll", onScroll, { passive: true });
-
-/* ─── Animación de entrada en scroll (Intersection Observer) ─── */
-const animateOnScroll = () => {
-  const targets = document.querySelectorAll(
-    ".service-card, .project-card, .testimonial-card, .step-card, .faq-item, .consorcios-panel > div, .why-list li, .trust-item"
-  );
-
-  if (!("IntersectionObserver" in window)) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = "1";
-          entry.target.style.transform = "translateY(0)";
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.08 }
-  );
-
-  targets.forEach((el, i) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(20px)";
-    el.style.transition = `opacity .4s ease ${(i % 4) * 0.08}s, transform .4s ease ${(i % 4) * 0.08}s`;
-    observer.observe(el);
-  });
-};
+    window.scrollY > 10 ? "0 4px 24px rgba(9,35,63,.10)" : "none";
+}, { passive: true });
 
 /* ─── Año en footer ─── */
 const yearEl = document.querySelector("#year");
@@ -143,4 +108,3 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ─── Init ─── */
 lucide.createIcons();
-animateOnScroll();
