@@ -55,8 +55,8 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* ─── LAYOUT ─── */
 .container {
-  width: calc(100% - clamp(32px, 5vw, 80px));
-  max-width: 1320px;
+  width: calc(100% - clamp(32px, 4vw, 64px));
+  max-width: 1760px;
   margin-inline: auto;
 }
 .section { padding: 88px 0; }
@@ -837,8 +837,8 @@ details > summary::-webkit-details-marker { display: none; }
    ════════════════════════════════════════════════ */
 .faq { background: var(--cream); }
 .faq-wrap {
-  width: calc(100% - clamp(32px, 5vw, 80px));
-  max-width: 1120px;
+  width: calc(100% - clamp(32px, 4vw, 64px));
+  max-width: 1600px;
   margin-inline: auto;
 }
 .faq-list { display: grid; gap: 10px; margin-bottom: 40px; }
@@ -1338,7 +1338,7 @@ footer {
 @media (min-width: 1600px) {
   .container {
     width: calc(100% - 80px);
-    max-width: 1320px;
+    max-width: 1760px;
   }
   .hero h1 { font-size: 68px; }
 }
