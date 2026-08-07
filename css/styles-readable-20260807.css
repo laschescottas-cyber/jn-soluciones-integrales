@@ -403,26 +403,33 @@ details > summary::-webkit-details-marker { display: none; }
   grid-template-columns: repeat(4, 1fr);
 }
 .trust-item {
-  min-height: 88px;
+  min-height: 104px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 11px;
-  padding: 18px 16px;
+  gap: 14px;
+  padding: 25px 20px;
   color: var(--navy);
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
   border-right: 1px solid var(--line);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 .trust-item:last-child { border-right: 0; }
-.trust-item svg { color: var(--gold); width: 22px; height: 22px; flex-shrink: 0; }
+.trust-item svg { color: var(--gold); width: 27px; height: 27px; flex-shrink: 0; stroke-width: 2; }
 
 /* ════════════════════════════════════════════════
    SERVICIOS
    ════════════════════════════════════════════════ */
 .services { background: var(--cream); }
+.services .section-heading { margin-bottom: 54px; }
+.services .section-heading > p {
+  width: 100%;
+  max-width: 680px;
+  line-height: 1.6;
+  margin-block: 8px 2px;
+}
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -840,10 +847,16 @@ details > summary::-webkit-details-marker { display: none; }
 .faq { background: var(--cream); }
 .faq-wrap {
   width: calc(100% - clamp(32px, 4vw, 64px));
-  max-width: 1600px;
+  max-width: 960px;
   margin-inline: auto;
 }
-.faq-list { display: grid; gap: 10px; margin-bottom: 40px; }
+.faq-list {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 32px;
+}
 .faq-item {
   background: white;
   border: 1px solid #e6e2da;
@@ -860,7 +873,7 @@ details > summary::-webkit-details-marker { display: none; }
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px 22px;
+  padding: 18px 24px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
@@ -890,11 +903,33 @@ details > summary::-webkit-details-marker { display: none; }
 .faq-cta {
   display: flex;
   align-items: center;
-  gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  max-width: 850px;
+  margin-inline: auto;
+  padding: 24px 28px;
+  background: var(--paper);
+  border: 1px solid #e6e2da;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
 }
-.faq-cta p { color: var(--muted); font-size: 15px; margin: 0; }
+.faq-cta p {
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.faq-cta .button {
+  color: #fff;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.faq-cta .button:hover {
+  color: #fff;
+  background: var(--navy-soft);
+  border-color: var(--navy-soft);
+}
 
 /* ════════════════════════════════════════════════
    FORMULARIO
@@ -1190,8 +1225,8 @@ footer {
   .floating-rating { display: none; }
 
   /* Trust */
-  .trust-item { font-size: 12px; min-height: 78px; }
-  .trust-item svg { width: 20px; }
+  .trust-item { font-size: 15px; min-height: 92px; }
+  .trust-item svg { width: 24px; height: 24px; }
 
   /* Headings */
   .section-heading { display: block; }
@@ -1225,6 +1260,8 @@ footer {
   /* FAQ */
   .faq-question { font-size: 15px; padding: 18px 18px; }
   .faq-answer { padding: 0 18px 18px; }
+  .faq-cta { flex-direction: column; gap: 14px; padding: 22px 18px; text-align: center; }
+  .faq-cta .button { width: 100%; }
 
   /* Form */
   .contact-section { padding: 64px 0; }
@@ -1310,7 +1347,7 @@ footer {
   .contact-copy h2 { font-size: clamp(42px, 3vw, 54px); }
   .section-heading > p,
   .section-heading.centered > p { font-size: 18px; max-width: 620px; }
-  .trust-item { font-size: 15px; }
+  .trust-item { font-size: 17px; }
   .service-card h3 { font-size: 23px; }
   .service-card p { font-size: 17px; }
   .service-card a { font-size: 16px; }
