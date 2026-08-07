@@ -55,8 +55,8 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* ─── LAYOUT ─── */
 .container {
-  width: calc(100% - clamp(32px, 6vw, 120px));
-  max-width: 1680px;
+  width: calc(100% - clamp(32px, 3.5vw, 68px));
+  max-width: none;
   margin-inline: auto;
 }
 .section { padding: 88px 0; }
@@ -171,7 +171,7 @@ details > summary::-webkit-details-marker { display: none; }
   -webkit-backdrop-filter: blur(14px);
 }
 .nav-wrap {
-  min-height: 78px;
+  min-height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -180,25 +180,25 @@ details > summary::-webkit-details-marker { display: none; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 13px;
   flex-shrink: 0;
 }
 .brand img {
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
   border-radius: 0;
   object-fit: contain;
   flex-shrink: 0;
 }
 .brand span { display: grid; line-height: 1; }
-.brand strong { color: var(--navy); font-size: 21px; letter-spacing: -.04em; }
-.brand small { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .09em; margin-top: 4px; }
+.brand strong { color: var(--navy); font-size: 24px; letter-spacing: -.04em; }
+.brand small { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .09em; margin-top: 5px; }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
-  font-size: 14px;
+  gap: clamp(20px, 1.8vw, 34px);
+  font-size: 15px;
   font-weight: 700;
   color: #32475b;
 }
@@ -836,7 +836,7 @@ details > summary::-webkit-details-marker { display: none; }
    FAQ
    ════════════════════════════════════════════════ */
 .faq { background: var(--cream); }
-.faq-wrap { max-width: 760px; margin-inline: auto; }
+.faq-wrap { width: 100%; max-width: none; margin-inline: auto; }
 .faq-list { display: grid; gap: 10px; margin-bottom: 40px; }
 .faq-item {
   background: white;
@@ -896,8 +896,8 @@ details > summary::-webkit-details-marker { display: none; }
 .contact-section { padding: 88px 0; background: white; }
 .contact-grid {
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 72px;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(60px, 6vw, 120px);
   align-items: start;
 }
 .contact-copy h2 { margin-bottom: 14px; }
@@ -1117,7 +1117,7 @@ footer {
   .menu-button { display: flex; align-items: center; }
   .nav-links {
     position: absolute;
-    top: 78px;
+    top: 88px;
     left: 0;
     right: 0;
     display: none;
@@ -1152,7 +1152,11 @@ footer {
   html { scroll-padding-top: 72px; }
 
   /* Header */
+  .nav-wrap { min-height: 72px; }
+  .brand img { width: 50px; height: 50px; }
+  .brand strong { font-size: 20px; }
   .brand small { display: none; }
+  .nav-links { top: 72px; }
 
   /* Hero */
   .hero { padding: 56px 0 72px; }
@@ -1280,19 +1284,19 @@ footer {
 /* ─── DESKTOP AMPLIO ─── */
 @media (min-width: 1280px) {
   .hero-grid {
-    grid-template-columns: minmax(0, 1.04fr) minmax(560px, .96fr);
+    grid-template-columns: minmax(0, 1.02fr) minmax(620px, .98fr);
     gap: clamp(64px, 5vw, 96px);
   }
-  .hero-copy { max-width: 780px; }
-  .hero-copy > p { max-width: 660px; }
-  .hero-card { padding: 20px; }
+  .hero-copy { max-width: 860px; }
+  .hero-copy > p { max-width: 720px; }
+  .hero-card { padding: 22px; }
 }
 
 /* ─── LARGE SCREENS (4K) ─── */
 @media (min-width: 1600px) {
   .container {
-    width: calc(100% - 120px);
-    max-width: 1680px;
+    width: calc(100% - 68px);
+    max-width: none;
   }
   .hero h1 { font-size: 76px; }
 }
