@@ -55,8 +55,8 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* ─── LAYOUT ─── */
 .container {
-  width: calc(100% - clamp(32px, 3.5vw, 68px));
-  max-width: none;
+  width: calc(100% - clamp(32px, 5vw, 80px));
+  max-width: 1320px;
   margin-inline: auto;
 }
 .section { padding: 88px 0; }
@@ -836,7 +836,11 @@ details > summary::-webkit-details-marker { display: none; }
    FAQ
    ════════════════════════════════════════════════ */
 .faq { background: var(--cream); }
-.faq-wrap { width: 100%; max-width: none; margin-inline: auto; }
+.faq-wrap {
+  width: calc(100% - clamp(32px, 5vw, 80px));
+  max-width: 1120px;
+  margin-inline: auto;
+}
 .faq-list { display: grid; gap: 10px; margin-bottom: 40px; }
 .faq-item {
   background: white;
@@ -1333,8 +1337,8 @@ footer {
 /* ─── LARGE SCREENS (4K) ─── */
 @media (min-width: 1600px) {
   .container {
-    width: calc(100% - 68px);
-    max-width: none;
+    width: calc(100% - 80px);
+    max-width: 1320px;
   }
-  .hero h1 { font-size: 76px; }
+  .hero h1 { font-size: 68px; }
 }
