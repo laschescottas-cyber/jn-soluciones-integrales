@@ -1350,8 +1350,8 @@ footer {
 }
 
 
-/* ─── HERO DESKTOP PANORÁMICO ─── */
-@media (min-width: 1025px) {
+/* ─── HERO DESKTOP TIPO BANNER ─── */
+@media (min-width: 1200px) {
   .hero {
     padding: 0;
   }
@@ -1359,63 +1359,73 @@ footer {
   .hero .hero-grid {
     width: 100%;
     max-width: none;
-    min-height: 560px;
-    grid-template-columns: minmax(470px, .82fr) minmax(620px, 1.18fr);
+    min-height: 480px;
+    grid-template-columns: minmax(470px, 42%) minmax(0, 58%);
     gap: 0;
     align-items: stretch;
   }
 
   .hero-copy {
+    position: relative;
+    z-index: 3;
     align-self: center;
     max-width: 780px;
-    padding: 76px clamp(46px, 4.5vw, 92px) 76px clamp(54px, 7vw, 138px);
+    padding: 64px clamp(44px, 4vw, 82px) 64px clamp(54px, 6vw, 120px);
   }
 
   .hero h1 {
-    font-size: clamp(48px, 4.2vw, 68px);
+    font-size: clamp(46px, 3.8vw, 64px);
   }
 
   .hero-copy > p {
-    max-width: 660px;
+    max-width: 650px;
   }
 
   .hero-visual {
-    min-height: 560px;
-    padding: 46px 0;
-    display: flex;
-    align-items: stretch;
+    min-height: 480px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
   }
 
   .hero-visual::before {
-    inset: 24px 0 24px -20px;
-    border-radius: 32px 0 0 32px;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    inset: 0 auto 0 0;
+    width: 150px;
+    border: 0;
+    border-radius: 0;
+    background: linear-gradient(90deg, var(--navy) 0%, rgba(9,35,63,.7) 35%, transparent 100%);
+    box-shadow: none;
+    pointer-events: none;
   }
 
   .hero-card {
     width: 100%;
-    min-height: 100%;
-    padding: 14px 0 14px 14px;
-    border-radius: 24px 0 0 24px;
-    display: flex;
-    align-items: center;
+    height: 100%;
+    min-height: 480px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
     background: #fff;
   }
 
   .hero-card img {
     width: 100%;
     height: 100%;
-    max-height: 430px;
-    object-fit: contain;
-    border-radius: 14px 0 0 14px;
+    min-height: 480px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
   }
 
-  .floating-proof {
-    left: 18px;
-    bottom: 18px;
-  }
-
+  .floating-proof,
   .floating-rating {
-    right: 24px;
-    top: 34px;
+    display: none;
   }
 }
