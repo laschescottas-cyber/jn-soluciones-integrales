@@ -782,14 +782,24 @@ details > summary::-webkit-details-marker { display: none; }
 }
 .testimonials .section-heading h2 { color: white; }
 .testimonials .kicker-light { color: var(--gold-light); }
+.testimonial-heading {
+  max-width: none !important;
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+.testimonial-heading h2 {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(38px, 3vw, 52px);
+}
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 48px;
+  gap: 22px;
+  margin-top: 42px;
 }
 .testimonial-card {
-  padding: 28px;
+  padding: 32px;
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(255,255,255,.13);
   border-radius: var(--radius);
@@ -805,10 +815,11 @@ details > summary::-webkit-details-marker { display: none; }
 }
 .testimonial-stars { color: var(--gold-light); font-size: 18px; letter-spacing: 2px; }
 .testimonial-card blockquote {
-  color: #d4e0eb;
-  font-size: 15px;
-  line-height: 1.7;
-  font-style: italic;
+  color: #eef4f8;
+  font-size: 18px;
+  line-height: 1.72;
+  font-style: normal;
+  font-weight: 400;
   flex-grow: 1;
   quotes: "\201C" "\201D";
 }
@@ -833,8 +844,8 @@ details > summary::-webkit-details-marker { display: none; }
 .author-1 { background: var(--gold-light); }
 .author-2 { background: #7ecfff; }
 .author-3 { background: #a8f0c8; }
-.testimonial-author strong { display: block; color: white; font-size: 14px; }
-.testimonial-author span { color: var(--muted-light); font-size: 12px; margin-top: 2px; display: block; }
+.testimonial-author strong { display: block; color: white; font-size: 16px; }
+.testimonial-author span { color: #b7c7d5; font-size: 13px; margin-top: 3px; display: block; }
 
 /* ════════════════════════════════════════════════
    CONSORCIOS
@@ -1247,6 +1258,7 @@ footer {
    RESPONSIVE — MENU HAMBURGUESA (≤ 900px)
    ════════════════════════════════════════════════ */
 @media (max-width: 900px) {
+  .testimonial-heading h2 { white-space: normal; }
   .menu-button { display: flex; align-items: center; }
   .nav-links {
     position: absolute;
