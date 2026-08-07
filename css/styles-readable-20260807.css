@@ -1767,6 +1767,11 @@ footer {
   border-radius: var(--radius);
 }
 
+.assurance-card:last-child {
+  grid-column: 2 / 4;
+  align-items: center;
+}
+
 .assurance-featured {
   grid-row: span 2;
   min-height: 438px;
@@ -1893,6 +1898,10 @@ footer {
     grid-row: auto;
     min-height: 290px;
   }
+
+  .assurance-card:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1913,6 +1922,11 @@ footer {
 
   .assurance-featured {
     justify-content: flex-start;
+  }
+
+  .assurance-card:last-child {
+    grid-column: auto;
+    align-items: flex-start;
   }
 
   .assurance-featured h3 {
