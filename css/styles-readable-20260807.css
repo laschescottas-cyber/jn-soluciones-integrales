@@ -1348,3 +1348,74 @@ footer {
   }
   .hero h1 { font-size: 68px; }
 }
+
+
+/* ─── HERO DESKTOP PANORÁMICO ─── */
+@media (min-width: 1025px) {
+  .hero {
+    padding: 0;
+  }
+
+  .hero .hero-grid {
+    width: 100%;
+    max-width: none;
+    min-height: 560px;
+    grid-template-columns: minmax(470px, .82fr) minmax(620px, 1.18fr);
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .hero-copy {
+    align-self: center;
+    max-width: 780px;
+    padding: 76px clamp(46px, 4.5vw, 92px) 76px clamp(54px, 7vw, 138px);
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 4.2vw, 68px);
+  }
+
+  .hero-copy > p {
+    max-width: 660px;
+  }
+
+  .hero-visual {
+    min-height: 560px;
+    padding: 46px 0;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .hero-visual::before {
+    inset: 24px 0 24px -20px;
+    border-radius: 32px 0 0 32px;
+  }
+
+  .hero-card {
+    width: 100%;
+    min-height: 100%;
+    padding: 14px 0 14px 14px;
+    border-radius: 24px 0 0 24px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+  }
+
+  .hero-card img {
+    width: 100%;
+    height: 100%;
+    max-height: 430px;
+    object-fit: contain;
+    border-radius: 14px 0 0 14px;
+  }
+
+  .floating-proof {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .floating-rating {
+    right: 24px;
+    top: 34px;
+  }
+}
