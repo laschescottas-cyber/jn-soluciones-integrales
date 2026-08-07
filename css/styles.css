@@ -55,7 +55,8 @@ details > summary::-webkit-details-marker { display: none; }
 
 /* ─── LAYOUT ─── */
 .container {
-  width: min(1160px, calc(100% - 32px));
+  width: calc(100% - clamp(32px, 6vw, 120px));
+  max-width: 1680px;
   margin-inline: auto;
 }
 .section { padding: 88px 0; }
@@ -270,6 +271,7 @@ details > summary::-webkit-details-marker { display: none; }
   gap: 56px;
   align-items: center;
 }
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -1275,8 +1277,22 @@ footer {
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
+/* ─── DESKTOP AMPLIO ─── */
+@media (min-width: 1280px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.04fr) minmax(560px, .96fr);
+    gap: clamp(64px, 5vw, 96px);
+  }
+  .hero-copy { max-width: 780px; }
+  .hero-copy > p { max-width: 660px; }
+  .hero-card { padding: 20px; }
+}
+
 /* ─── LARGE SCREENS (4K) ─── */
 @media (min-width: 1600px) {
-  .container { width: min(1280px, calc(100% - 80px)); }
+  .container {
+    width: calc(100% - 120px);
+    max-width: 1680px;
+  }
   .hero h1 { font-size: 76px; }
 }
