@@ -191,3 +191,6 @@ if ("IntersectionObserver" in window && observedSections.length) {
 
   observedSections.forEach((section) => activeSectionObserver.observe(section));
 }
+
+/* Inicializa también los íconos creados dinámicamente. */
+lucide.createIcons();
