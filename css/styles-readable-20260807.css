@@ -1923,3 +1923,114 @@ footer {
     padding: 22px 20px;
   }
 }
+
+
+/* ════════════════════════════════════════════════
+   MEJORAS SEO / UX — GALERÍA Y NAVEGACIÓN
+   ════════════════════════════════════════════════ */
+.optional-label {
+  color: var(--muted-light);
+  font-size: .9em;
+  font-weight: 600;
+}
+
+.nav-links > a:not(.nav-cta).is-active {
+  color: var(--gold-dark);
+}
+
+.nav-links > a:not(.nav-cta).is-active::after {
+  width: 100%;
+}
+
+.projects-showcase img[role="button"] {
+  cursor: zoom-in;
+}
+
+.projects-showcase img[role="button"]:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+}
+
+.lightbox-open {
+  overflow: hidden;
+}
+
+.project-lightbox {
+  width: min(94vw, 1180px);
+  max-width: none;
+  max-height: 92vh;
+  padding: 0;
+  color: white;
+  background: #061523;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 18px;
+  box-shadow: 0 30px 90px rgba(0,0,0,.55);
+  overflow: hidden;
+}
+
+.project-lightbox::backdrop {
+  background: rgba(2,10,18,.88);
+  backdrop-filter: blur(5px);
+}
+
+.project-lightbox figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  max-height: 92vh;
+  margin: 0;
+}
+
+.project-lightbox img {
+  display: block;
+  width: 100%;
+  height: min(80vh, 850px);
+  object-fit: contain;
+  background: #030b12;
+}
+
+.project-lightbox figcaption {
+  padding: 15px 64px 17px 20px;
+  color: #d7e1ea;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.lightbox-close {
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  right: 13px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: rgba(4,17,31,.84);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: var(--gold-dark);
+}
+
+.lightbox-close svg {
+  width: 21px;
+  height: 21px;
+}
+
+@media (max-width: 680px) {
+  .project-lightbox {
+    width: calc(100vw - 20px);
+    border-radius: 14px;
+  }
+
+  .project-lightbox img {
+    height: 76vh;
+  }
+
+  .project-lightbox figcaption {
+    font-size: 13px;
+  }
+}
